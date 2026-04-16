@@ -1,0 +1,192 @@
+             <!DOCTYPE html>
+<html>
+<head>
+    <title>Marwadi University</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body{
+            background:#f5f7fa;
+        }
+
+        /* HEADER */
+        .header{
+            display:flex;
+            align-items:center;
+            justify-content:space-between;
+            padding:20px 60px;
+            background:white;
+            border-bottom:3px solid #ccc;
+        }
+
+        .logo img{
+            height:90px;
+        }
+
+        .naac{
+            font-size:40px;
+            font-weight:bold;
+            color:black;
+        }
+
+        /* BANNER */
+        .banner{
+            height:450px;
+            background: url('marwadi-university-rajkot-325310.webp') center/cover no-repeat;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            color:white;
+            text-align:center;
+        }
+
+        .banner h1{
+            background:rgba(0,0,0,0.5);
+            padding:20px 40px;
+            border-radius:8px;
+            font-size:36px;
+        }
+
+        /* SECTION COMMON */
+        .section{
+            padding:60px 80px;
+            text-align:center;
+            border-bottom:3px solid #ddd;
+            background:#ffffff;
+        }
+
+        .section h2{
+            color:#c62828;
+            margin-bottom:25px;
+            font-size:30px;
+        }
+
+        .section p{
+            max-width:900px;
+            margin:auto;
+            font-size:18px;
+            line-height:1.7;
+        }
+
+        /* PLACEMENT */
+        .placement-container{
+            display:flex;
+            justify-content:center;
+            gap:40px;
+            flex-wrap:wrap;
+            margin-top:30px;
+        }
+
+        .placement-box{
+            background:white;
+            padding:25px;
+            width:220px;
+            border-radius:10px;
+            box-shadow:0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .placement-box h3{
+            color:#c62828;
+            margin-bottom:10px;
+        }
+
+        /* FOOTER */
+        .footer{
+            background:#1d6ce2;
+            text-align:center;
+            padding:25px;
+            font-size:16px;
+        }
+
+        /* RESPONSIVE */
+        @media(max-width:768px){
+            .header{
+                flex-direction:column;
+                gap:15px;
+            }
+
+            .banner{
+                height:300px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <div class="header">
+        <div class="logo">
+            <img src="MU_LOGO_BLACK.jpg" alt="Marwadi University Logo">
+        </div>
+
+        <div class="naac">
+            NAAC A+
+        </div>
+    </div>
+
+    <!-- BANNER -->
+    <div class="banner">
+        <h1>Marwadi University - Excellence in Education</h1>
+    </div>
+
+    <!-- VISION & MISSION -->
+    <div class="section">
+        <h2>Vision & Mission</h2>
+        <p>
+            To be a globally recognized university delivering quality education, 
+            innovation, and research excellence. Our mission is to nurture students 
+            with strong technical knowledge, leadership skills, and ethical values 
+            to serve society and industry effectively.
+        </p>
+    </div>
+
+    <!-- PSO -->
+    <div class="section">
+        <h2>Program Specific Outcomes (PSO)</h2>
+        <p>
+            • Apply engineering knowledge to solve real-world challenges.<br><br>
+            • Design secure and scalable systems using modern tools.<br><br>
+            • Demonstrate teamwork, leadership, and professional ethics.<br><br>
+            • Adapt to emerging technologies and industry demands.
+        </p>
+    </div>
+
+    <!-- PLACEMENT DATA -->
+    <div class="section">
+        <h2>Placement Data</h2>
+
+        <div class="placement-container">
+
+            <div class="placement-box">
+                <h3>95%</h3>
+                <p>Placement Rate</p>
+            </div>
+
+            <div class="placement-box">
+                <h3>18 LPA</h3>
+                <p>Highest Package</p>
+            </div>
+
+            <div class="placement-box">
+                <h3>300+</h3>
+                <p>Recruiting Companies</p>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer">
+        © 2026 Marwadi University | All Rights Reserved
+    </div>
+
+</body>
+</html>

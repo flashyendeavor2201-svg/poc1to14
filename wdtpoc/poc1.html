@@ -1,0 +1,191 @@
+1. Create a Timetable using HTML Table tags of your respective division.
+<!DOCTYPE html>
+<html>
+<head>
+<title>Marwadi University Time Table</title><style>
+body{
+font-family: Arial,sans-serif;
+padding:20px;
+background:#f5f7fa;
+}
+/* ===== TABLE ===== */
+table{
+border-collapse:collapse;
+width:100%;
+}
+th,td{
+border:1px solid #000;
+padding:6px;
+text-align:center;
+font-size:13px;
+}
+/* colors same style as image */
+.header{background:#e6f0ff;font-weight:bold;font-size:16px;}
+.day{background:#d6e6ff;font-weight:bold;}
+.break{background:#ffd9d9;font-weight:bold;}
+.section{background:#d6e6ff;font-weight:bold;}
+img{height:80px;}
+</style>
+</head>
+
+<body><!-- ================= HEADER ================= -->
+<table>
+<tr>
+<td rowspan="2" style="width:120px">
+<img src="https://www.marwadiuniversity.ac.in/wp-content/uploads/2023/04/mu-logo.png">
+</td>
+
+<td class="header">
+FACULTY OF ENGINEERING AND TECHNOLOGY<br>
+Department of Computer Science & Engineering – Cyber Security
+</td>
+</tr>
+
+<tr>
+<td>
+Class Room: MA201, MA305, MA309, MB310 &nbsp;&nbsp;&nbsp;
+Semester: IV &nbsp;&nbsp;&nbsp;
+Division: ET1 &nbsp;&nbsp;&nbsp;
+With Effect From Date: 15/01/2026
+</td>
+</tr>
+</table>
+
+<br>
+
+<!-- ================= MAIN TIMETABLE ================= -->
+<table>
+
+<tr class="day">
+<th>Sr.No</th>
+<th>TIME</th>
+<th>MONDAY</th><th>TUESDAY</th>
+<th>WEDNESDAY</th>
+<th>THURSDAY</th>
+<th>FRIDAY</th>
+</tr>
+
+<!-- 1 -->
+<tr>
+<td>1</td>
+<td>07:30 to 08:30</td>
+<td>DM - AK<br>MA201</td>
+<td>A : MK MSS MA306A<br>B : EH YJV MA306</td>
+<td>MK - MSS<br>MA305</td>
+<td>DM - AK<br>MA305</td>
+<td>A : OSS PMP MA207<br>B : EH YJV MA306</td>
+</tr>
+
+<!-- 2 -->
+<tr>
+<td>2</td>
+<td>08:30 to 09:30</td>
+<td rowspan="2">A : EH YJV MA306<br>B : WDT PJM MB10</td>
+<td rowspan="2">MK - MSS<br>MA301</td>
+<td rowspan="2">A : WDT PJM MB10<br>B : MK MSS MA209</td>
+<td rowspan="2">A : EH YJV MA306<br>B : OSS PMP MB205A</td>
+<td rowspan="2">EH - YJV<br>MA309</td>
+</tr>
+
+<!-- 3 -->
+<tr><td>3</td>
+<td>09:30 to 10:30</td>
+</tr>
+
+<!-- BREAK -->
+<tr class="break">
+<td colspan="7">BREAK (10:30 - 11:00)</td>
+</tr>
+
+<!-- 4 -->
+<tr>
+<td>4</td>
+<td>11:00 to 12:00</td>
+<td>DM - AK - A - T<br>MA309</td>
+<td rowspan="2">EH - YJV<br>MA305</td>
+<td>WDT - PJM<br>MA305</td>
+<td rowspan="2">OSS - PMP<br>MA309</td>
+<td rowspan="2">
+LIBRARY<br><br>
+CPI - RDD MB414<br>
+11:30 to 12:30
+</td>
+</tr>
+
+<!-- 5 -->
+<tr>
+<td>5</td>
+<td>12:00 to 01:00</td>
+<td>WDT - PJM<br>MA309</td>
+<td>OSS - PMP<br>MA305</td></tr>
+
+<!-- 6 -->
+<tr>
+<td>6</td>
+<td>01:00 to 01:30</td>
+<td>LIBRARY</td>
+<td>WDT - PJM<br>MA305</td>
+<td>OSS - PMP<br>MA305</td>
+<td>QLA - BK<br>PG3SHB</td>
+<td>DM - AK - B - T<br>MB310</td>
+</tr>
+
+</table>
+
+<br><br>
+
+<!-- ================= SUBJECT / LAB / FACULTY ================= -->
+<table>
+
+<tr class="section">
+<th colspan="3">SUBJECT INITIALS, CODES AND NAMES</th>
+<th colspan="2">LAB PREMISES</th>
+<th colspan="2">FACULTY INITIALS AND NAMES</th>
+</tr>
+
+<tr>
+<td>OSS</td><td>01CC401</td><td>Operating Systems & Security</td>
+<td>EH</td><td>MA306</td>
+<td>AK</td><td>Dr. Avniva Kumar</td>
+</tr>
+
+<tr>
+<td>WDT</td><td>01CC402</td><td>Web Development Technology</td>
+<td>WDT</td><td>MB10</td>
+<td>YJV</td><td>Prof. Yash Vasoya</td>
+</tr>
+
+<tr>
+<td>EH</td><td>01CC403</td><td>Ethical Hacking</td>
+<td>MK</td><td>MA209, MA306A</td>
+<td>PJM</td><td>Prof. Priyanka Mangi</td>
+</tr>
+
+<tr>
+<td>MK</td><td>01CC404</td><td>Mastering Kali Linux</td>
+<td>OSS</td><td>MB205A, MA207</td>
+<td>MSS</td><td>Prof. Mallika Srivastava</td>
+</tr>
+
+<tr>
+<td>CPI</td><td>01CC408</td><td>Creativity, Problem Solving & Innovation</td>
+<td></td><td></td>
+<td>PMP</td><td>Prof. Parth Parmar</td>
+</tr>
+
+<tr>
+<td>DM</td><td>01CE049</td><td>Discrete Mathematics</td>
+<td></td><td></td>
+<td>RDD</td><td>Prof. Ronak Doshi</td>
+</tr>
+
+<tr>
+    <td>QLA</td><td>01CR402</td><td>Quantitative & Logical Ability - 2</td>
+<td></td><td></td>
+<td>BK</td><td>Prof. Bhavesh Kamalpara</td>
+</tr>
+
+</table>
+
+</body>
+</html>

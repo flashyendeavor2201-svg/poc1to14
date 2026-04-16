@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GadgetHub</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+.dropdown-menu { opacity: 0; visibility: hidden;
+transform: translateY(10px); transition: all 0.3s ease;
+}
+
+.group:hover .dropdown-menu { opacity: 1;
+visibility: visible; transform: translateY(0);
+}
+
+.product-card { transition: all 0.4s ease;
+}
+
+.product-card:hover { transform: translateY(-12px);
+box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+ 
+
+}
+
+.product-image img { transition: transform 0.5s ease;
+}
+
+.product-card:hover .product-image img { transform: scale(1.08);
+}
+
+.added {
+background: #10b981 !important; animation: pop 0.4s ease;
+}
+
+@keyframes pop {
+0% { transform: scale(0.95); } 50% { transform: scale(1.08); } 100% { transform: scale(1); }
+}
+</style>
+</head>
+<body class="bg-gray-50">
+
+<!-- Navigation Bar -->
+<nav class="bg-white shadow-md sticky top-0 z-50">
+<div class="max-w-7xl mx-auto px-6">
+<div class="flex justify-between items-center h-16">
+
+<!-- Logo -->
+<div class="flex items-center">
+<a href="#" class="text-2xl font-bold text-indigo-600">GadgetHub</a>
+</div>
+
+<!-- Desktop Menu -->
+ 
+
+<div class="hidden md:flex items-center space-x-8">
+
+<a href="#" class="text-gray-700 hover:text-indigo-600 font-medium transition">Home</a>
+
+<!-- Shop Dropdown -->
+<div class="group relative">
+<button class="flex items-center gap-1 text-gray-700 hover:text-indigo-600 font-medium transition">
+Shop
+<i class="fas fa-chevron-down text-xs mt-1"></i>
+</button>
+
+<div class="dropdown-menu absolute left-0 mt-2 w-56 bg-white rounded-2xl shadow-xl py-4 border border-gray-100">
+<a href="#" class="block px-6 py-3 hover:bg-gray-50 text-gray-700 hover:text-indigo-600">All Products</a>
+<a href="#" class="block px-6 py-3 hover:bg-gray-50 text-gray-700 hover:text-indigo- 600">Headphones</a>
+<a href="#" class="block px-6 py-3 hover:bg-gray-50 text-gray-700 hover:text-indigo- 600">Smartphones</a>
+<a href="#" class="block px-6 py-3 hover:bg-gray-50 text-gray-700 hover:text-indigo- 600">Laptops & Tablets</a>
+<a href="#" class="block px-6 py-3 hover:bg-gray-50 text-gray-700 hover:text-indigo- 600">Smart Watches</a>
+<a href="#" class="block px-6 py-3 hover:bg-gray-50 text-gray-700 hover:text-indigo- 600">Earbuds</a>
+<div class="border-t my-2"></div>
+<a href="#" class="block px-6 py-3 text-indigo-600 font-medium hover:bg-gray-50">View All Categories →</a>
+</div>
+</div>
+
+<a href="#" class="text-gray-700 hover:text-indigo-600 font-medium transition">Deals</a>
+<a href="#" class="text-gray-700 hover:text-indigo-600 font-medium transition">Categories</a>
+<a href="#" class="text-gray-700 hover:text-indigo-600 font-medium transition">About</a>
+ 
+
+</div>
+
+<!-- Right Side -->
+<div class="flex items-center gap-6">
+<button class="text-gray-600 hover:text-indigo-600 transition">
+<i class="fas fa-search text-xl"></i>
+</button>
+
+<button class="text-gray-600 hover:text-indigo-600 transition">
+<i class="fas fa-heart text-xl"></i>
+</button>
+
+<!-- Cart -->
+<button id="cart-button" class="flex items-center gap-2 text-gray-600 hover:text-indigo-600 transition relative">
+<i class="fas fa-shopping-cart text-xl"></i>
+<span id="cart-count" class="absolute -top-1 -right-1 bg-red-500 text-white text-xs font-bold px-
+1.5 py-0.5 rounded-full min-w-[18px] text-center">0</span>
+</button>
+
+<!-- User -->
+<div class="w-9 h-9 bg-indigo-100 rounded-full flex items-center justify-center text-indigo-700 font-semibold cursor-pointer">
+A
+</div>
+
+<!-- Mobile Menu -->
+<button class="md:hidden text-gray-600">
+<i class="fas fa-bars text-2xl"></i>
+</button>
+</div>
+</div>
+</div>
+</nav>
+ 
+
+<!-- Hero Banner -->
+<div class="bg-gradient-to-r from-indigo-600 to-purple-600 text-white py-16 text-center">
+<h1 class="text-4xl md:text-5xl font-bold mb-3">Premium Gadgets</h1>
+<p class="text-lg md:text-xl">Discover the latest electronics at unbeatable prices</p>
+</div>
+
+<!-- Products Section -->
+<div class="max-w-7xl mx-auto px-6 py-12">
+<h2 class="text-3xl font-bold text-gray-800 mb-10 text-center">Featured Products</h2>
+
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+<!-- Product 1 -->
+<div class="product-card bg-white rounded-3xl overflow-hidden shadow-lg">
+<div class="product-image h-64 bg-gray-100">
+<img src="https://m.media-amazon.com/images/I/61C9nWyExyL._SX522_.jpg" alt="Sony Headphones" class="w-full h-full object-cover">
+<div class="absolute top-4 right-4 bg-orange-500 text-white text-xs font-semibold px-4 py-1 rounded-full">BESTSELLER</div>
+</div>
+<div class="p-6">
+<h3 class="font-semibold text-lg leading-tight mb-2">Sony WH-1000XM5 Wireless Headphones</h3>
+<p class="text-2xl font-bold text-red-600 mb-6">₹27,989</p>
+<button onclick="addToCart(this)"
+class="w-full bg-red-600 hover:bg-red-700 text-white font-semibold py-4 rounded-2xl transition flex items-center justify-center gap-2">
+<i class="fas fa-shopping-cart"></i> Add to Cart
+</button>
+</div>
+</div>
+
+<!-- Product 2 -->
+<div class="product-card bg-white rounded-3xl overflow-hidden shadow-lg">
+ 
+
+<div class="product-image h-64 bg-gray-100">
+<img src="https://cdn.jiostore.online/v2/jmd-asp/jdprod/wrkr/products/pictures/item/free/resize- w:450/apple/494423196/0/Fi2vplSCNJ-QpSOszxyvK-Apple-Watch-Ultra-2-494423196-i-1- 1200Wx1200H.jpeg" alt="Apple Watch" class="w-full h-full object-cover">
+<div class="absolute top-4 right-4 bg-emerald-500 text-white text-xs font-semibold px-4 py-1 rounded-full">NEW</div>
+</div>
+<div class="p-6">
+<h3 class="font-semibold text-lg leading-tight mb-2">Apple Watch Ultra 2 Titanium</h3>
+<p class="text-2xl font-bold text-red-600 mb-6">₹78,900</p>
+<button onclick="addToCart(this)"
+class="w-full bg-red-600 hover:bg-red-700 text-white font-semibold py-4 rounded-2xl transition flex items-center justify-center gap-2">
+<i class="fas fa-shopping-cart"></i> Add to Cart
+</button>
+</div>
+</div>
+
+<!-- Product 3 -->
+<div class="product-card bg-white rounded-3xl overflow-hidden shadow-lg">
+<div class="product-image h-64 bg-gray-100">
+<img	src="https://m.media- amazon.com/images/I/71eX66ytH+L._AC_UY327_FMwebp_QL65_.jpg" alt="Laptop" class="w-full h- full object-cover">
+<div class="absolute top-4 right-4 bg-amber-500 text-white text-xs font-semibold px-4 py-1 rounded-full">TRENDING</div>
+</div>
+<div class="p-6">
+<h3 class="font-semibold text-lg leading-tight mb-2">MacBook Air 13 M5 (2026) 16GB RAM</h3>
+<p class="text-2xl font-bold text-red-600 mb-6">₹1,16,900</p>
+<button onclick="addToCart(this)"
+class="w-full bg-red-600 hover:bg-red-700 text-white font-semibold py-4 rounded-2xl transition flex items-center justify-center gap-2">
+ 
+
+<i class="fas fa-shopping-cart"></i> Add to Cart
+</button>
+</div>
+</div>
+
+<!-- Product 4 -->
+<div class="product-card bg-white rounded-3xl overflow-hidden shadow-lg">
+<div class="product-image h-64 bg-gray-100">
+<img	src="https://m.media- amazon.com/images/I/618vU2qKXQL._AC_UY327_FMwebp_QL65_.jpg" alt="SmartPhone" class="w- full h-full object-cover">
+<div class="absolute top-4 right-4 bg-blue-600 text-white text-xs font-semibold px-4 py-1 rounded- full">NEW ARRIVAL</div>
+</div>
+<div class="p-6">
+<h3 class="font-semibold text-lg leading-tight mb-2">iPhone 17 Pro</h3>
+<p class="text-2xl font-bold text-red-600 mb-6">₹1,34,900</p>
+<button onclick="addToCart(this)"
+class="w-full bg-red-600 hover:bg-red-700 text-white font-semibold py-4 rounded-2xl transition flex items-center justify-center gap-2">
+<i class="fas fa-shopping-cart"></i> Add to Cart
+</button>
+</div>
+</div>
+
+<!-- Product 5 -->
+<div class="product-card bg-white rounded-3xl overflow-hidden shadow-lg">
+<div class="product-image h-64 bg-gray-100">
+<img src="https://m.media-amazon.com/images/I/61GJAFdM9pL._SX522_.jpg" alt="Wireless Earbuds" class="w-full h-full object-cover">
+<div class="absolute top-4 right-4 bg-orange-500 text-white text-xs font-semibold px-4 py-1 rounded-full">BESTSELLER</div>
+</div>
+ 
+
+<div class="p-6">
+<h3 class="font-semibold text-lg leading-tight mb-2">Sony WF-1000XM5 True Wireless Earbuds</h3>
+<p class="text-2xl font-bold text-red-600 mb-6">₹20,490</p>
+<button onclick="addToCart(this)"
+class="w-full bg-red-600 hover:bg-red-700 text-white font-semibold py-4 rounded-2xl transition flex items-center justify-center gap-2">
+<i class="fas fa-shopping-cart"></i> Add to Cart
+</button>
+</div>
+</div>
+
+<!-- Product 6 -->
+<div class="product-card bg-white rounded-3xl overflow-hidden shadow-lg">
+<div class="product-image h-64 bg-gray-100">
+<img src="https://m.media-amazon.com/images/I/71vdBZKzcJL._SX679_.jpg" alt="Tablet" class="w-full h-full object-cover">
+<div class="absolute top-4 right-4 bg-emerald-500 text-white text-xs font-semibold px-4 py-1 rounded-full">NEW</div>
+</div>
+<div class="p-6">
+<h3 class="font-semibold text-lg leading-tight mb-2">iPad Pro 13-inch M4 256GB</h3>
+<p class="text-2xl font-bold text-red-600 mb-6">₹80,990</p>
+<button onclick="addToCart(this)"
+class="w-full bg-red-600 hover:bg-red-700 text-white font-semibold py-4 rounded-2xl transition flex items-center justify-center gap-2">
+<i class="fas fa-shopping-cart"></i> Add to Cart
+</button>
+</div>
+</div>
+
+</div>
+</div>
+ 
+
+
+<script>
+let cartCount = 0;
+const cartCountEl = document.getElementById('cart-count');
+
+function addToCart(button) {
+// Button animation
+const originalText = button.innerHTML; button.innerHTML = `<i class="fas fa-check"></i> Added`; button.classList.add('added');
+
+// Increase cart count cartCount++;
+cartCountEl.textContent = cartCount;
+
+// Floating animation createFloatingCart(button);
+
+// Reset button after 2 seconds setTimeout(() => { button.innerHTML = originalText; button.classList.remove('added');
+}, 2000);
+}
+
+function createFloatingCart(button) {
+const rect = button.getBoundingClientRect();
+
+const emoji = document.createElement('div'); emoji.textContent = '🛍'; emoji.style.position = 'fixed';
+emoji.style.left = `${rect.left + rect.width / 2 - 15}px`; emoji.style.top = `${rect.top}px`;
+emoji.style.fontSize = '28px'; emoji.style.zIndex = '9999';
+ 
+
+emoji.style.transition = 'all 1.4s cubic-bezier(0.25, 0.1, 0.25, 1)'; document.body.appendChild(emoji);
+
+setTimeout(() => {
+emoji.style.transform = 'translateY(-400px) translateX(60px)'; emoji.style.opacity = '0';
+}, 50);
+
+setTimeout(() => emoji.remove(), 1600);
+}
+
+// Optional: Click on cart icon to show alert document.getElementById('cart-button').addEventListener('click', () => { if (cartCount > 0) {
+alert(`Your cart has ${cartCount} item${cartCount > 1 ? 's' : ''}!`);
+} else {
+alert("Your cart is empty!");
+}
+});
+</script>
+
+</body>
+</html>
